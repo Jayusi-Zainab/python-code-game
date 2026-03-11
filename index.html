@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Code Challenge Game</title>
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f8;
+    text-align:center;
+}
+
+.container{
+    width:60%;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+code{
+    display:block;
+    text-align:left;
+    background:#272822;
+    color:#f8f8f2;
+    padding:15px;
+    border-radius:5px;
+    font-size:16px;
+}
+
+input{
+    width:80px;
+    padding:5px;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    font-size:16px;
+}
+
+#result{
+    font-weight:bold;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Python Code Challenge</h2>
+<p>Fill in the missing code</p>
+
+<code>
+numbers = [5, 8, 2, 10]<br><br>
+
+highest = <input id="blank1"><br>
+lowest = <input id="blank2"><br><br>
+
+print("Highest:", highest)<br>
+print("Lowest:", lowest)
+</code>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function checkAnswer(){
+
+let answer1 = document.getElementById("blank1").value.trim()
+let answer2 = document.getElementById("blank2").value.trim()
+
+let correct1 = "max(numbers)"
+let correct2 = "min(numbers)"
+
+if(answer1 === correct1 && answer2 === correct2){
+    document.getElementById("result").innerHTML =
+    "✅ Correct! Great job."
+}
+else{
+    document.getElementById("result").innerHTML =
+    "❌ Not correct. Try again."
+}
+
+}
+
+</script>
+
+</body>
+</html>
